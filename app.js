@@ -96,7 +96,7 @@ app.get('/posts/:_id', async(req, res)=>{
   const _id = req.params._id;
   const foundPost = await findOne(_id);
   const {title, postContent} = foundPost;
-  res.render("post", {title : foundPost.title, postContent: foundPost.postContent});
+  res.render("post", {title : title, postContent: postContent});
 
 });
 
